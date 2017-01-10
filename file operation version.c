@@ -6,7 +6,8 @@ int Lines(const char * FileName)
 	err = fopen_s(&fp, FileName, "r");
 	if (err == 0)
 	{
-		static int count = 0, c;
+		static int count = 0;
+		int c;
 		while ((c = fgetc(fp)) != EOF)
 		{
 			if (c == '\n') count++;
